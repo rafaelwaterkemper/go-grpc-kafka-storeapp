@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+option go_package = "go-grpc-kafka-storeapp/assets";
+
+package bank;
+
+// The Inventory service definition.
+service Bank {
+  // Check availability
+  rpc RegisterBankSlip (BankSlipRequest) returns (BankSlipReply) {}
+}
+
+message BankSlipRequest {
+  string person = 1;
+  int64  value = 2;
+  bool   dueDate  = 3;
+}
+
+// 
+message BankSlipReply {
+  bool success = 1;
+}
