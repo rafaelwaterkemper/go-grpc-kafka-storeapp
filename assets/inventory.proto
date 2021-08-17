@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "go-grpc-kafka-storeapp/assets";
+
+package inventory;
+
+// The Inventory service definition.
+service Inventory {
+  // Check availability
+  rpc CheckAvailability (AvailabilityRequest) returns (AvailabilityReply) {}
+}
+
+message AvailabilityRequest {
+  string product = 1;
+  int64  quantity = 2;
+  bool   book  = 3;
+}
+
+// 
+message AvailabilityReply {
+  int64 available = 1;
+  string booked = 2;
+}
