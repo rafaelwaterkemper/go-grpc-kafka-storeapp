@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "com.github.rafaelwaterkemper.go-grpc-kafka-storeapp.v1";
+option go_package = "com/github/rafaelwaterkemper/go-grpc-kafka-storeapp/v1";
 
 package inventory;
 
